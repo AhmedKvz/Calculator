@@ -105,11 +105,12 @@ body {
 }
 
 .header {
-  height: 100%;
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  justify-content: space-around;
+  width: 540px;
+  margin-bottom: 5%;
+  color: var(--submit-button-color);
 }
 
 .theme-slide {
@@ -141,20 +142,115 @@ body {
   justify-content: center;
   flex-direction: column;
   height: 100%;
-  
+  max-width: 540px;
+  width: 100%;
+  overflow: hidden;
 }
 
+
 .display {
-    background-color: var(--input-backround-color);
-    width: 540px;
-    height: 128px;
-    border-radius: 10px;
+  background-color: var(--input-backround-color);
+  width: 100%;
+  width: 540px;
+  height: 128px;
+  border-radius: 10px;
+  text-align: right;
+  padding-top: 20px;
+  padding-right: 30px;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--body-font-color);
+  position: relative;
+}
+
+.display-1 {
+  opacity: 0.4;
+  font-size: 1.5rem;
+  overflow: hidden;
+}
+
+.temp-result {
+  opacity: 0.4;
+  position: absolute;
+  left: 10;
+  bottom: 0;
+  font-size: 1.5rem;
 }
 
 .all-buttons {
-    background-color: var(--input-backround-color);
-    max-width: 540px;
-    width: 100%;
-    border-radius: 10px;
-    margin-top: 5%; 
+  padding: 32px 30px;
+  background-color: var(--input-backround-color);
+  max-width: 540px;
+  width: 100%;
+  height: 480px;
+  border-radius: 10px;
+  margin-top: 5%;
+  display: grid;
+  grid-template: repeat(4, 1fr) / repeat(4, 1fr);
+  grid-template-areas:
+    "seve eigh nine del"
+    "four five six plus"
+    "one two thre minu"
+    "dot zero div exs"
+    "res res equ equ";
+}
+
+.equal {
+  grid-area: equ;
+  color: var(--submit-button-color);
+  background-color: var(--submit-button-background);
+}
+
+.equal:hover {
+  background-color: var(--submit-hover-background);
+  box-shadow: var(--submit-hover-shadow);
+}
+
+.last-input-clear {
+    color: var(--submit-button-color);
+    background-color: var(--del-button-background);
+    box-shadow: var(--del-button-shadow);
+  
+}
+
+.all-clear {
+  grid-area: res;
+  color: var(--submit-button-color);
+  background-color: var(--del-button-background);
+  box-shadow: var(--del-button-shadow);
+
+}
+
+.all-clear:hover {
+    background-color: var(--del-hover-background);
+    box-shadow: var(--del-hover-shadow);
+}
+
+.button {
+  width: 101px;
+  height: 64px;
+  font-size: 1.875rem;
+  color: var(--normal-button-color);
+  background-color: var(--normal-button-background);
+  box-shadow: var(--normal-button-shadow);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--normal-hover-background);
+}
+
+.button-special {
+  width: 221px;
+  height: 64px;
+  font-size: 1.875rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+
+
+.last-input-clear {
+  font-size: 1.875rem;
 }
