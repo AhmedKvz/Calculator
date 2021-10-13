@@ -147,7 +147,6 @@ body {
   overflow: hidden;
 }
 
-
 .display {
   background-color: var(--input-backround-color);
   width: 100%;
@@ -207,10 +206,9 @@ body {
 }
 
 .last-input-clear {
-    color: var(--submit-button-color);
-    background-color: var(--del-button-background);
-    box-shadow: var(--del-button-shadow);
-  
+  color: var(--submit-button-color);
+  background-color: var(--del-button-background);
+  box-shadow: var(--del-button-shadow);
 }
 
 .all-clear {
@@ -218,12 +216,11 @@ body {
   color: var(--submit-button-color);
   background-color: var(--del-button-background);
   box-shadow: var(--del-button-shadow);
-
 }
 
 .all-clear:hover {
-    background-color: var(--del-hover-background);
-    box-shadow: var(--del-hover-shadow);
+  background-color: var(--del-hover-background);
+  box-shadow: var(--del-hover-shadow);
 }
 
 .button {
@@ -248,8 +245,6 @@ body {
   border-radius: 10px;
   cursor: pointer;
 }
-
-
 
 .last-input-clear {
   font-size: 1.875rem;

@@ -70,4 +70,17 @@ equalEl.addEventListener('click', (e) => {
     tempResult.innerText = '';
     dis2Num = result;
     dis1Num = '';
-})
+});
+
+function changeTheme(theme)
+{
+    const root = document.querySelector(':root')
+  
+    switch(theme) 
+    {
+        case 1:   root.className = ''; break;
+        case 2:   root.className = 'theme2'; break;
+        case 3:   root.className = 'theme3'; break;
+    }
+};
+
