@@ -72,6 +72,20 @@ equalEl.addEventListener('click', (e) => {
     dis1Num = '';
 });
 
+clearEl.addEventListener('click', (e) => {
+    display1El.innerText = '0';
+    display2El.innerText = '0';
+    dis1Num = '';
+    dis2Num = '';
+    result = '';
+    tempResult = '0';
+});
+
+clearLastEl.addEventListener('click', (e) =>{
+    display2El.innerText = '';
+    dis2Num = '';
+})
+
 function changeTheme(theme)
 {
     const root = document.querySelector(':root')
