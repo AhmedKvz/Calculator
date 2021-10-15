@@ -80,6 +80,8 @@
   visibility: visible;
 }
 
+/**************** Root ****************************/
+
 * {
   margin: 0;
   padding: 0;
@@ -104,18 +106,77 @@ body {
   justify-content: center;
 }
 
+
+/**************** Theme ****************************/
+.theme {
+font-size: 12px;
+letter-spacing: 1px;
+color: var(--body-font-color);
+text-transform: uppercase;
+ margin-bottom: .25rem;
+ margin-right: 1.313rem;
+}
+  
+.theme-slide {
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: flex-end;
+}
+
+ span {
+ border-radius: 50%;
+ background-color: var(--submit-button-background);
+ opacity: 1;
+ width: 1rem;
+ height: 1rem;
+ text-align: center;
+ font-size: 12px;
+ line-height: 13px;
+ transform: translatex(0);
+ transition: 0.11s;
+ cursor: pointer;
+}
+      
+span:hover {
+ background-color: var(--submit-hover-background);
+}
+      
+ .opacity {
+ opacity: 0;
+}
+ 
+/**************** Header ****************************/   
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 540px;
+  width: 33.75rem;
   margin-bottom: 5%;
   color: var(--submit-button-color);
 }
 
-.theme-slide {
+h2 {
+  color: var(--body-font-color);
+}
+
+.numbers {
+  height: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: row;  
+  font-size: .75rem;
+  color: var(--body-font-color);
+  margin-left: 0.938rem;
+  padding: 0 5px 1px 3px;
+}
+
+.number-1 {
+  margin-right: .5rem;
+}
+
+.number-2 {
+  margin-right: .5rem;
 }
 
 .circles-numbers {
@@ -123,35 +184,37 @@ body {
   flex-direction: column;
 }
 
-.numbers {
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-}
-
 .circles {
   height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
+  background-color: var(--bar-background-color);
+  border-radius: 13px;
+  width: 4.438rem;
+  height: 1.75rem;
+  padding: 4px 2px;
 }
 
+/**************** Container-Calculator ****************************/
 .container-calculator {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   height: 100%;
-  max-width: 540px;
+  max-width: 33.75rem;
   width: 100%;
   overflow: hidden;
 }
 
+/**************** Display ****************************/
 .display {
   background-color: var(--input-backround-color);
   width: 100%;
-  width: 540px;
-  height: 128px;
+  width: 33.75rem;
+  height: 8rem;
   border-radius: 10px;
   text-align: right;
   padding-top: 20px;
@@ -166,6 +229,11 @@ body {
   opacity: 0.4;
   font-size: 1.5rem;
   overflow: hidden;
+  padding: 0;
+}
+
+.display-2 {
+  margin-top: 5%;
 }
 
 .temp-result {
@@ -176,12 +244,13 @@ body {
   font-size: 1.5rem;
 }
 
+/**************** Buttons ****************************/
 .all-buttons {
   padding: 32px 30px;
   background-color: var(--input-backround-color);
   max-width: 540px;
   width: 100%;
-  height: 480px;
+  height: 30rem;
   border-radius: 10px;
   margin-top: 5%;
   display: grid;
@@ -224,8 +293,8 @@ body {
 }
 
 .button {
-  width: 101px;
-  height: 64px;
+  width: 6.313rem;
+  height: 4rem;
   font-size: 1.875rem;
   color: var(--normal-button-color);
   background-color: var(--normal-button-background);
@@ -239,8 +308,8 @@ body {
 }
 
 .button-special {
-  width: 221px;
-  height: 64px;
+  width: 13.813rem;
+  height: 4rem;
   font-size: 1.875rem;
   border-radius: 10px;
   cursor: pointer;
@@ -248,4 +317,108 @@ body {
 
 .last-input-clear {
   font-size: 1.875rem;
+  color: var(--submit-button-color);
+  background-color: var(--del-button-background);
+  box-shadow: var(--del-button-shadow);
 }
+
+.last-input-clear:hover {
+  background-color: var(--del-hover-background);
+  box-shadow: var(--del-hover-shadow);
+}
+
+/**************** Attribution ****************************/
+.attribution {
+    text-align: center;
+    color: var(--body-font-color);
+}
+/******************* Media Query ************************/
+
+/******************* Phones 412px  ************************/
+@media screen and ( max-width: 566px ) {
+    .header {
+        width: 20.438rem;
+    }
+
+    .container-calculator {
+        max-width: 26.063rem;
+    }
+
+    .display {
+        max-width: 20.438rem;
+    }
+
+    .all-buttons {
+        max-width: 20.438rem;
+    }
+
+    .button-special {
+        width: 8.188rem;
+    }
+
+    .button {
+        width: 3.75rem;
+        height: 4rem;
+    }
+
+    .button-special {
+        width: 8.188rem;
+    }
+}
+
+
+@media screen and ( max-width: 414px ){
+    .header {
+        width: 20.438rem;
+    }
+
+    .container-calculator {
+        max-width: 26.063rem;
+    }
+
+    .display {
+        max-width: 20.438rem;
+    }
+
+    .all-buttons {
+        max-width: 20.438rem;
+    }
+
+    .button-special {
+        width: 8.188rem;
+    }
+
+    .button {
+        width: 3.75rem;
+        height: 4rem;
+    }
+
+    .button-special {
+        width: 8.188rem;
+    }
+}
+    
+/******************* Phones 375  ************************/
+
+@media screen and ( max-width: 375px ) {
+    body {
+        padding-top: .813rem;
+    }
+    .container-calculator {
+        height: 98%;
+    }
+
+    .display {
+        height: 4rem;
+    }
+
+    .display-1 {
+        font-size: .8rem;
+    }
+
+    .display-2 {
+        margin-top: 2%;
+        font-size: 1.125rem;
+    }
+}
+

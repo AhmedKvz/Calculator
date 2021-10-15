@@ -15,45 +15,53 @@
   </head>
   <body>
     <main class="container">
-      
+      <!-- Header Start-->
       <section class="header-theme">
         <header class="header">
-          
-            <h2>calc</h2>
-          
+          <h2>calc</h2>
+
+          <!-- Switch Theme Start-->
           <div class="theme-slide">
             <div class="theme">
               <p>theme</p>
             </div>
             <div class="circles-numbers">
-              <div class="numbers">123</div>
+              <div class="numbers">
+                <p class="number-1">1</p>
+                <p class="number-2">2</p>
+                <p class="number-3">3</p>
+              </div>
               <div class="circles">
-                <span onclick="changeTheme(1)" style="margin: 10px;" class="circle">1</span>
-                <span onclick="changeTheme(2)" style="margin: 10px;" class="circle">2</span>
-                <span onclick="changeTheme(3)" style="margin: 10px;" class="circle">3</span>
+                <span onclick="changeTheme(1)" class="circle-1"></span>
+                <span onclick="changeTheme(2)" class="circle-2 opacity"></span>
+                <span onclick="changeTheme(3)" class="circle-3 opacity"></span>
               </div>
             </div>
           </div>
-
+          <!-- Switch Theme End-->
         </header>
       </section>
+      <!-- Header End-->
 
+      <!-- Calc Start-->
       <section class="calculator">
-
         <div class="container-calculator">
+          <!-- Display Result Start-->
 
           <div class="display">
             <div class="display-1"></div>
             <div class="display-2">66.6</div>
             <div class="temp-result"></div>
           </div>
+          <!-- Display Result End-->
 
+          <!-- Buttons Start-->
           <div class="all-buttons">
-            <button class="button-special all-clear">reset</button> 
+            <button class="button-special all-clear">reset</button>
             <button class="button number">7</button>
             <button class="button number">8</button>
             <button class="button number">9</button>
-            <button class="button  last-input-clear">del</button>
+            <button class="button last-input-clear">del</button>
             <button class="button number">4</button>
             <button class="button number">5</button>
             <button class="button number">6</button>
@@ -66,16 +74,15 @@
             <button class="button number btn-0">0</button>
             <button class="button operation">/</button>
             <button class="button operation">x</button>
-            <button class="button-special  equal">=</button>
+            <button class="button-special equal">=</button>
           </div>
+          <!-- Buttons Start-->
         </div>
-     
       </section>
-    
+      <!-- Calc End-->
     </main>
 
     <div class="attribution">Coded by <a href="#">ahmedKvz</a></div>
-
 
     <script src="/data/script.js"></script>
   </body>

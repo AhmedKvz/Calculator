@@ -66,11 +66,13 @@ equalEl.addEventListener('click', (e) => {
     haveDot = false;
     mathOperation();
     clearVar();
-    display2El.innerText = result;
+    display2El.innerText = result; 
+    display1El.innerText = '';
     tempResult.innerText = '';
     dis2Num = result;
     dis1Num = '';
 });
+
 
 clearEl.addEventListener('click', (e) => {
     display1El.innerText = '0';
@@ -78,23 +80,42 @@ clearEl.addEventListener('click', (e) => {
     dis1Num = '';
     dis2Num = '';
     result = '';
-    tempResult = '0';
+    tempResult.innerText = '0';
 });
 
 clearLastEl.addEventListener('click', (e) =>{
     display2El.innerText = '';
     dis2Num = '';
+    tempResult = '';
 })
+
 
 function changeTheme(theme)
 {
+
     const root = document.querySelector(':root')
-  
+    const circleFirst = document.querySelector('.circle-1')
+    const circleSecond = document.querySelector('.circle-2')
+    const circleThird = document.querySelector('.circle-3')
+    
     switch(theme) 
     {
-        case 1:   root.className = ''; break;
-        case 2:   root.className = 'theme2'; break;
-        case 3:   root.className = 'theme3'; break;
+       
+        case 1:   root.className = '';
+        circleFirst.classList.remove('opacity');
+        circleSecond.classList.add('opacity');
+        circleThird.classList.add('opacity'); break;
+        
+        case 2:   root.className = 'theme2';
+        circleSecond.classList.remove('opacity');
+        circleFirst.classList.add('opacity');
+        circleThird.classList.add('opacity'); break;
+        
+        case 3:   root.className = 'theme3';
+        circleThird.classList.remove('opacity');
+        circleFirst.classList.add('opacity');
+        circleSecond.classList.add('opacity'); break;
+        
     }
 };
 
