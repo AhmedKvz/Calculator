@@ -89,7 +89,7 @@
 }
 
 body {
-  height: 100vh;
+  height: 100%;
   font-family: "Spartan", sans-serif;
   display: flex;
   flex-direction: column;
@@ -99,6 +99,7 @@ body {
 }
 
 .container {
+  margin-top: 1%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -277,17 +278,18 @@ h2 {
   box-shadow: var(--submit-hover-shadow);
 }
 
-.last-input-clear {
-  color: var(--submit-button-color);
-  background-color: var(--del-button-background);
-  box-shadow: var(--del-button-shadow);
-}
 
 .all-clear {
   grid-area: res;
   color: var(--submit-button-color);
   background-color: var(--del-button-background);
   box-shadow: var(--del-button-shadow);
+  font-size: .7rem;
+  font-family: 'Spartan';
+  font-weight: 700;
+  line-height: 17.92px;
+  letter-spacing: -0.27px;
+  padding-top: 2%;
 }
 
 .all-clear:hover {
@@ -313,16 +315,18 @@ h2 {
 .button-special {
   width: 13.813rem;
   height: 4rem;
-  font-size: 1.875rem;
+  font-size: 1.3rem;
   border-radius: 10px;
   cursor: pointer;
 }
 
 .last-input-clear {
-  font-size: 1.875rem;
+  font-size: 1.3rem;
   color: var(--submit-button-color);
   background-color: var(--del-button-background);
   box-shadow: var(--del-button-shadow);
+  font-weight: 700;
+  letter-spacing: -0.33px;
 }
 
 .last-input-clear:hover {
@@ -332,6 +336,7 @@ h2 {
 
 /**************** Attribution ****************************/
 .attribution {
+    margin-top: 5%;
     text-align: center;
     color: var(--body-font-color);
 }
@@ -356,8 +361,13 @@ h2 {
         padding: 30px 32px;
     }
 
+    .last-input-clear {
+      font-size: .9rem;
+    }
+
     .button-special {
       width: 7.855rem;
+      font-size: .9rem;
     }
 
     .button {
