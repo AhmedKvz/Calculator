@@ -234,6 +234,7 @@ h2 {
 
 .display-2 {
   margin-top: 5%;
+  margin-right: 15px;
 }
 
 .temp-result {
@@ -246,13 +247,15 @@ h2 {
 
 /**************** Buttons ****************************/
 .all-buttons {
-  padding: 32px 30px;
+  padding: 32px 30px 32px 45px;
   background-color: var(--input-backround-color);
   max-width: 540px;
   width: 100%;
   height: 30rem;
   border-radius: 10px;
   margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
   display: grid;
   grid-template: repeat(4, 1fr) / repeat(4, 1fr);
   grid-template-areas:
@@ -350,10 +353,11 @@ h2 {
 
     .all-buttons {
         max-width: 20.438rem;
+        padding: 30px 32px;
     }
 
     .button-special {
-        width: 8.188rem;
+      width: 7.855rem;
     }
 
     .button {
@@ -361,9 +365,7 @@ h2 {
         height: 4rem;
     }
 
-    .button-special {
-        width: 8.188rem;
-    }
+   
 }
 
 
@@ -378,7 +380,18 @@ h2 {
 
     .display {
         max-width: 20.438rem;
+        height: 5.5rem;
     }
+
+    .display-1 {
+      font-size: .8rem;
+    }
+
+    .display-2 {
+      margin-top: 2%;
+      font-size: 2rem;
+      margin-top: 5%;
+  }
 
     .all-buttons {
         max-width: 20.438rem;
@@ -394,8 +407,13 @@ h2 {
     }
 
     .button-special {
-        width: 8.188rem;
+        width: 7.855rem;
     }
+
+    .attribution {
+      margin-top: 5%;
+    }
+  
 }
     
 /******************* Phones 375  ************************/
@@ -403,13 +421,20 @@ h2 {
 @media screen and ( max-width: 375px ) {
     body {
         padding-top: .813rem;
+        height: 100%;
+        overflow: scroll;
     }
+
+    .container {
+      margin-top: 10%;
+    }
+
     .container-calculator {
         height: 98%;
     }
 
     .display {
-        height: 4rem;
+        height: 6rem;
     }
 
     .display-1 {
@@ -418,7 +443,11 @@ h2 {
 
     .display-2 {
         margin-top: 2%;
-        font-size: 1.125rem;
+        font-size: 2rem;
+    }
+
+    .attribution {
+      margin-top: 10%;
     }
 }
 
