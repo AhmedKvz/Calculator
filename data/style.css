@@ -1,0 +1,465 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap");
+
+:root {
+  --body-font-color: hsl(0, 0%, 100%);
+  --body-background-color: hsl(222, 26%, 31%);
+  --input-backround-color: hsl(223, 37%, 15%);
+  --normal-button-color: hsl(221, 14%, 31%);
+  --normal-button-background: hsl(30, 25%, 89%);
+  --normal-button-shadow: hsl(28, 16%, 65%);
+  --del-button-background: hsl(225, 21%, 49%);
+  --del-button-shadow: hsl(224, 28%, 35%);
+  --submit-button-background: hsl(6, 63%, 50%);
+  --submit-button-shadow: hsl(6, 70%, 34%);
+  --submit-button-color: hsl(0, 0%, 100%);
+  --bar-background-color: hsl(223, 31%, 20%);
+
+  /*Hover*/
+  --normal-hover-background: hsl(31, 100%, 100%);
+  --normal-hover-shadow: hsl(27, 15%, 65%);
+  --del-hover-background: hsl(224, 51%, 76%);
+  --del-hover-shadow: hsl(225, 28%, 35%);
+  --submit-hover-background: hsl(6, 93%, 67%);
+  --submit-hover-shadow: hsl(6, 70%, 34%);
+}
+.theme1 .circle:first-of-type {
+  visibility: visible;
+}
+
+/*Theme 2*/
+:root.theme2 {
+  --body-font-color: hsl(60, 10%, 19%);
+  --body-background-color: hsl(0, 0%, 90%);
+  --input-backround-color: hsl(0, 0%, 93%);
+  --normal-button-color: hsl(60, 10%, 19%);
+  --normal-button-background: hsl(45, 7%, 89%);
+  --normal-button-shadow: hsl(35, 11%, 61%);
+  --del-button-background: hsl(185, 42%, 37%);
+  --del-button-shadow: hsl(185, 58%, 25%);
+  --submit-button-background: hsl(25, 98%, 40%);
+  --submit-button-shadow: hsl(25, 99%, 27%);
+  --submit-button-color: hsl(0, 0%, 100%);
+  --bar-background-color: hsl(0, 5%, 81%);
+
+  /*Hover*/
+  --normal-hover-background: hsl(0, 0%, 100%);
+  --normal-hover-shadow: hsl(34, 11%, 61%);
+  --del-hover-background: hsl(184, 40%, 56%);
+  --del-hover-shadow: hsl(184, 59%, 25%);
+  --submit-hover-background: hsl(25, 100%, 61%);
+  --submit-hover-shadow: hsl(25, 99%, 27%);
+}
+.theme2 .circle:nth-of-type(2) {
+  visibility: visible;
+}
+
+/*Theme 3*/
+:root.theme3 {
+  --body-font-color: hsl(52, 100%, 62%);
+  --body-background-color: hsl(268, 74%, 9%);
+  --input-backround-color: hsl(268, 71%, 12%);
+  --normal-button-color: hsl(52, 100%, 62%);
+  --normal-button-background: hsl(268, 47%, 21%);
+  --normal-button-shadow: hsl(290, 70%, 36%);
+  --del-button-background: hsl(281, 89%, 26%);
+  --del-button-shadow: hsl(285, 91%, 52%);
+  --submit-button-background: hsl(176, 100%, 44%);
+  --submit-button-shadow: hsl(177, 92%, 70%);
+  --submit-button-color: hsl(198, 20%, 13%);
+  --bar-background-color: hsl(268, 71%, 12%);
+
+  /*Hover*/
+  --normal-hover-background: hsl(268, 54%, 44%);
+  --normal-hover-shadow: hsl(290, 70%, 36%);
+  --del-hover-background: hsl(280, 56%, 44%);
+  --del-hover-shadow: hsl(285, 91%, 52%);
+  --submit-hover-background: hsl(176, 100%, 79%);
+  --submit-hover-shadow: hsl(176, 93%, 70%);
+}
+.theme3 .circle:last-of-type {
+  visibility: visible;
+}
+
+/**************** Root ****************************/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: "Spartan", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  background-color: var(--body-background-color);
+}
+
+.container {
+  margin-top: 5%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/**************** Theme ****************************/
+.theme {
+font-size: 12px;
+letter-spacing: 1px;
+color: var(--body-font-color);
+text-transform: uppercase;
+ margin-bottom: .25rem;
+ margin-right: 1.313rem;
+}
+  
+.theme-slide {
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: flex-end;
+}
+
+ span {
+ border-radius: 50%;
+ background-color: var(--submit-button-background);
+ opacity: 1;
+ width: 1rem;
+ height: 1rem;
+ text-align: center;
+ font-size: 12px;
+ line-height: 13px;
+ transform: translatex(0);
+ transition: 0.11s;
+ cursor: pointer;
+}
+      
+span:hover {
+ background-color: var(--submit-hover-background);
+}
+      
+ .opacity {
+ opacity: 0;
+}
+ 
+/**************** Header ****************************/   
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 33.75rem;
+  margin-bottom: 5%;
+  color: var(--submit-button-color);
+}
+
+h2 {
+  color: var(--body-font-color);
+}
+
+.numbers {
+  height: 100%;
+  display: flex;
+  flex-direction: row;  
+  font-size: .75rem;
+  color: var(--body-font-color);
+  margin-left: 0.938rem;
+  padding: 0 5px 1px 3px;
+}
+
+.number-1 {
+  margin-right: .5rem;
+}
+
+.number-2 {
+  margin-right: .5rem;
+}
+
+.circles-numbers {
+  display: flex;
+  flex-direction: column;
+}
+
+.circles {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bar-background-color);
+  border-radius: 13px;
+  width: 4.438rem;
+  height: 1.75rem;
+  padding: 4px 2px;
+}
+
+/**************** Container-Calculator ****************************/
+.container-calculator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  max-width: 33.75rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+/**************** Display ****************************/
+.display {
+  background-color: var(--input-backround-color);
+  width: 100%;
+  width: 33.75rem;
+  height: 8rem;
+  border-radius: 10px;
+  text-align: right;
+  padding-top: 20px;
+  padding-right: 30px;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--body-font-color);
+  position: relative;
+}
+
+.display-1 {
+  opacity: 0.4;
+  font-size: 1.5rem;
+  overflow: hidden;
+  padding: 0;
+}
+
+.display-2 {
+  margin-top: 5%;
+  margin-right: 15px;
+}
+
+.temp-result {
+  opacity: 0.4;
+  position: absolute;
+  left: 10;
+  bottom: 0;
+  font-size: 1.5rem;
+}
+
+/**************** Buttons ****************************/
+.all-buttons {
+  padding: 32px 30px 32px 45px;
+  background-color: var(--input-backround-color);
+  max-width: 540px;
+  width: 100%;
+  height: 30rem;
+  border-radius: 10px;
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template: repeat(4, 1fr) / repeat(4, 1fr);
+  grid-template-areas:
+    "seve eigh nine del"
+    "four five six plus"
+    "one two thre minu"
+    "dot zero div exs"
+    "res res equ equ";
+}
+
+.equal {
+  grid-area: equ;
+  color: var(--submit-button-color);
+  background-color: var(--submit-button-background);
+}
+
+.equal:hover {
+  background-color: var(--submit-hover-background);
+  box-shadow: var(--submit-hover-shadow);
+}
+
+
+.all-clear {
+  grid-area: res;
+  color: var(--submit-button-color);
+  background-color: var(--del-button-background);
+  box-shadow: var(--del-button-shadow);
+  font-size: .7rem;
+  font-family: 'Spartan';
+  font-weight: 700;
+  line-height: 17.92px;
+  letter-spacing: -0.27px;
+  padding-top: 2%;
+}
+
+.all-clear:hover {
+  background-color: var(--del-hover-background);
+  box-shadow: var(--del-hover-shadow);
+}
+
+.button {
+  width: 6.313rem;
+  height: 4rem;
+  font-size: 1.875rem;
+  color: var(--normal-button-color);
+  background-color: var(--normal-button-background);
+  box-shadow: var(--normal-button-shadow);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--normal-hover-background);
+}
+
+.button-special {
+  width: 13.813rem;
+  height: 4rem;
+  font-size: 1.3rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.last-input-clear {
+  font-size: 1.3rem;
+  color: var(--submit-button-color);
+  background-color: var(--del-button-background);
+  box-shadow: var(--del-button-shadow);
+  font-weight: 700;
+  letter-spacing: -0.33px;
+}
+
+.last-input-clear:hover {
+  background-color: var(--del-hover-background);
+  box-shadow: var(--del-hover-shadow);
+}
+
+/**************** Attribution ****************************/
+.attribution {
+    text-align: center;
+   
+    margin-top: 7%;
+
+    color: var(--body-font-color);
+}
+/******************* Media Query ************************/
+
+/******************* Phones 412px  ************************/
+@media screen and ( max-width: 566px ) {
+    .header {
+        width: 20.438rem;
+    }
+
+    .container-calculator {
+        max-width: 26.063rem;
+    }
+
+    .display {
+        max-width: 20.438rem;
+    }
+
+    .all-buttons {
+        max-width: 20.438rem;
+        padding: 30px 32px;
+    }
+
+    .last-input-clear {
+      font-size: .9rem;
+    }
+
+    .button-special {
+      width: 7.855rem;
+      font-size: .9rem;
+    }
+
+    .button {
+        width: 3.75rem;
+        height: 4rem;
+    }
+
+   
+}
+
+
+@media screen and ( max-width: 414px ){
+    .header {
+        width: 20.438rem;
+    }
+
+    .container-calculator {
+        max-width: 26.063rem;
+    }
+
+    .display {
+        max-width: 20.438rem;
+        height: 5.5rem;
+    }
+
+    .display-1 {
+      font-size: .8rem;
+    }
+
+    .display-2 {
+      margin-top: 2%;
+      font-size: 2rem;
+      margin-top: 5%;
+  }
+
+    .all-buttons {
+        max-width: 20.438rem;
+    }
+
+    .button-special {
+        width: 8.188rem;
+    }
+
+    .button {
+        width: 3.75rem;
+        height: 4rem;
+    }
+
+    .button-special {
+        width: 7.855rem;
+    }
+
+    .attribution {
+      margin-top: 5%;
+    }
+  
+}
+    
+/******************* Phones 375  ************************/
+
+@media screen and ( max-width: 375px ) {
+    body {
+        padding-top: .813rem;
+        height: 100%;
+        overflow: scroll;
+    }
+
+    .container {
+      margin-top: 10%;
+    }
+
+    .container-calculator {
+        height: 98%;
+    }
+
+    .display {
+        height: 6rem;
+    }
+
+    .display-1 {
+        font-size: .8rem;
+    }
+
+    .display-2 {
+        margin-top: 2%;
+        font-size: 2rem;
+    }
+
+    .attribution {
+      margin-top: 10%;
+    }
+}
+

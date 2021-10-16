@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="data/style.css" />
+    <title>Calculator app</title>
+  </head>
+  <body>
+    <main class="container">
+      <!-- Header Start-->
+      <section class="header-theme">
+        <header class="header">
+          <h2>calc</h2>
+
+          <!-- Switch Theme Start-->
+          <div class="theme-slide">
+            <div class="theme">
+              <p>theme</p>
+            </div>
+            <div class="circles-numbers">
+              <div class="numbers">
+                <p class="number-1">1</p>
+                <p class="number-2">2</p>
+                <p class="number-3">3</p>
+              </div>
+              <div class="circles">
+                <span onclick="changeTheme(1)" class="circle-1"></span>
+                <span onclick="changeTheme(2)" class="circle-2 opacity"></span>
+                <span onclick="changeTheme(3)" class="circle-3 opacity"></span>
+              </div>
+            </div>
+          </div>
+          <!-- Switch Theme End-->
+        </header>
+      </section>
+      <!-- Header End-->
+
+      <!-- Calc Start-->
+      <section class="calculator">
+        <div class="container-calculator">
+          <!-- Display Result Start-->
+
+          <div class="display">
+            <div data-previous-operand class="previous-operand display-1"></div>
+            <div data-current-operand class="current-operand display-2">399,981</div>
+            
+          </div>
+          <!-- Display Result End-->
+
+          <!-- Buttons Start-->
+          <div class="all-buttons">
+            <button data-all-clear class="button-special all-clear">RESET</button>
+            <button data-number class="button number">7</button>
+            <button data-number class="button number">8</button>
+            <button data-number class="button number">9</button>
+            <button data-delete class="button last-input-clear">DEL</button>
+            <button data-number class="button number">4</button>
+            <button data-number class="button number">5</button>
+            <button data-number class="button number">6</button>
+            <button data-operation class="button operation">+</button>
+            <button data-number class="button number">1</button>
+            <button data-number class="button number">2</button>
+            <button data-number class="button number">3</button>
+            <button data-operation class="button operation">-</button>
+            <button data-number class="button number dot">.</button>
+            <button data-number class="button number btn-0">0</button>
+            <button data-operation class="button operation">/</button>
+            <button data-operation class="button operation">x</button>
+            <button data-equals class="button-special equal">=</button>
+          </div>
+          <!-- Buttons Start-->
+        </div>
+      </section>
+      <!-- Calc End-->
+    </main>
+
+    <div class="attribution">Coded by <a href="#">ahmedKvz</a></div>
+
+    <script src="/data/script.js"></script>
+  </body>
+</html>
